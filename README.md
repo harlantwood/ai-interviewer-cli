@@ -12,6 +12,7 @@ This project is to scratch a personal itch: have an AI interview me, to get me t
 - install [ospeak](https://github.com/simonw/ospeak)
 
 ```bash
+cp .env.example .env   # and edit as needed
 pip3 install -r requirements.txt
 ./interview.py
 ```

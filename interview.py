@@ -8,8 +8,8 @@ import subprocess
 import sys
 import yaml
 
-# MODEL ="llamafile"
-MODEL ="gpt-4-1106-preview"
+MODEL ="llamafile"
+# MODEL ="gpt-4-1106-preview"
 
 def main():
     load_dotenv()
