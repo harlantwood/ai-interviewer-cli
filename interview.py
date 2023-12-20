@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from dotenv import load_dotenv
 import os
 import re
 import shlex
@@ -7,7 +8,11 @@ import subprocess
 import sys
 import yaml
 
+# MODEL ="llamafile"
+MODEL ="gpt-4-1106-preview"
+
 def main():
+    load_dotenv()
     with open('interviews/harlan01.yml', 'r') as file:
         data = yaml.safe_load(file)
 
@@ -26,7 +31,7 @@ def main():
     """
     system_prompt = re.sub(r'\s+', ' ', system_prompt)
 
-    cmd_gen_question = ["llm", "--model", "gpt-4-1106-preview", "--system", system_prompt, "Ask me a question."]
+    cmd_gen_question = ["llm", "--model", MODEL, "--system", system_prompt, "Ask me a question."]
     log(f"cmd_gen_question: {shlex.join(cmd_gen_question)}")
 
     process = subprocess.run(cmd_gen_question, text=True, capture_output=True)
@@ -37,8 +42,6 @@ def main():
 
     question = process.stdout.strip()
     log(f"Question: {question}")
-
-    question = "Harlan, could you share your insights on how the dynamic between collaboration and autonomy shapes the development of what you'd consider an enlightened civilization?"
 
     cmd_speak_question = ["ospeak", "-v", "nova", question]
     log(f"cmd_speak_question: {shlex.join(cmd_speak_question)}")

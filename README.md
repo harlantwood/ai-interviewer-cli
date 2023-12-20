@@ -6,6 +6,16 @@
 
 This project is to scratch a personal itch: have an AI interview me, to get me to talk about topics I want to share with the world. Also to explore AI a bit, and hopefully release something useful for others as well as myself.
 
+## Quickstart
+
+- install [llm](https://github.com/simonw/llm)
+- install [ospeak](https://github.com/simonw/ospeak)
+
+```bash
+pip3 install -r requirements.txt
+./interview.py
+```
+
 ## Features
 
 Initial release will be purely CLI based workflow - no GUI, nerds only :)
