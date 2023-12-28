@@ -1,10 +1,14 @@
-# Interview.ai
+# AI Interviewer CLI
 
 **TL;DR: AI interviews you, on whatever topics you want, creating audio archives and transcripts.**
 
+## NOTE!
+
+I am mostly working now on the web version instead of this CLI version, see https://github.com/harlantwood/ai-interviewer
+
 ## Motivation
 
-This project is to scratch a personal itch: have an AI interview me, to get me to talk about topics I want to share with the world. Also to explore AI a bit, and hopefully release something useful for others as well as myself.
+This project is primarily to scratch my own itch: have an AI interview me, to get me to talk about topics I want to share with the world. Also to explore AI a bit, and hopefully release something useful for others as well as myself.
 
 ## Quickstart
 
